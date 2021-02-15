@@ -1,4 +1,4 @@
-import RateLimit from 'express-rate-limit';
+import RateLimit = require('express-rate-limit');
 import { Options } from 'graphql-yoga';
 
 const {
@@ -30,5 +30,4 @@ const CONFIG = {
     }
 };
 
-export = CONFIG;
-  
+export default CONFIG;

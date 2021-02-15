@@ -1,6 +1,5 @@
-import { ApolloServerOptions } from 'graphql-yoga/dist/types';
-import jwt from 'jsonwebtoken';
-import { SESSION_SECRET } from '../config';
+import jwt = require("jsonwebtoken");
+import config from '../config';
 
 
 const createToken = (
@@ -8,7 +7,7 @@ const createToken = (
     options?: jwt.SignOptions,
   ): string => {
     try {
-      const token = jwt.sign(payload, SESSION_SECRET!, {
+      const token = jwt.sign(payload, config.SESSION_SECRET!, {
         issuer: "@rcdev-stack/api",
         audience: ["@rcdev-stack/app"],
         expiresIn: "4w",
@@ -23,7 +22,7 @@ const createToken = (
   
 const decryptToken = <T>(token: string): T  => {
     try {
-      jwt.verify(token, SESSION_SECRET!)
+      jwt.verify(token, config.SESSION_SECRET!)
       const payload = jwt.decode(token)
       return payload as T
     } catch (error) {

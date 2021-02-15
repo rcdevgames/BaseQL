@@ -32,6 +32,6 @@ const initialize = async (_, { data }) => {
     console.log(data);
 }
 
-export = {
+export default {
     initialize
 }

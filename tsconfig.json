@@ -1,11 +1,36 @@
+// {
+//     "compilerOptions": {
+//         "target": "es5",
+//         "module": "commonjs",
+//         "strict": true,
+//         "esModuleInterop": true,
+//         "skipLibCheck": true,
+//         "forceConsistentCasingInFileNames": true,
+//         "noImplicitAny": false
+//     }
+// }
+
 {
     "compilerOptions": {
-        "target": "es5",
-        "module": "commonjs",
-        "strict": true,
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true,
-        "noImplicitAny": false
-    }
-}
+      "target": "es5",
+      "rootDir": "./src/",
+      "outDir": "./build/",
+      "module": "commonjs",
+      "experimentalDecorators": true,
+      "declaration": false,
+      "noImplicitAny": false,
+      "removeComments": true,
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "emitDecoratorMetadata": true,
+      "inlineSources": true,
+      "baseUrl": ".",
+      "lib": ["es5"],
+      "paths": {
+        "*": ["*", "./@types/*"]
+      },
+      "typeRoots": ["./node_modules/@types", "./@types"]
+    },
+    "include": ["./src"],
+    "exclude": ["node_modules"]
+}  
