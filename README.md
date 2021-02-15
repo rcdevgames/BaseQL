@@ -1,4 +1,4 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/c032a516c90d1ec7dd89/maintainability)](https://codeclimate.com/github/JorgeCeja/graphql-yoga-database/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f8c7a14cc1ab305f54f8/maintainability)](https://codeclimate.com/github/rcdevgames/BaseQL/maintainability)
 # Base Project - Nodejs GraphQL Server - PostgreSQL
 
 ## Features
