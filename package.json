@@ -8,8 +8,9 @@
     "scripts": {
         "dev": "NODE_ENV=development ts-node-dev src/index.ts",
         "start": "NODE_ENV=production node build/index.js",
-        "prestart": "npm run build",
+        "prestart": "npm run build && npm run check-file",
         "build": "tsc",
+        "check-file": "node checklib.js",
         "cli:modelgen": ""
     },
     "lint-staged": {
@@ -29,24 +30,24 @@
         "dateformat": "^4.5.0",
         "dotenv": "^8.2.0",
         "express-rate-limit": "^5.2.3",
-        "graphql-yoga": "^1.2.0",
+        "graphql-yoga": "^1.18.3",
         "helmet": "^3.10.0",
         "imgur-uploader": "^4.2.1",
         "jsonwebtoken": "^8.5.1",
+        "mime": "^2.5.2",
         "mkdirp": "^1.0.4",
         "pg": "^8.5.1",
         "pg-hstore": "^2.3.3",
         "randomstring": "^1.1.5",
-        "sequelize": "^6.5.0",
-        "sequelize-auto": "^0.7.10",
-        "uuidv4": "^6.2.6",
-        "xss": "^1.0.8"
+        "uuidv4": "^6.2.6"
     },
     "devDependencies": {
         "@types/bcrypt": "^3.0.0",
         "@types/cors": "^2.8.9",
         "@types/express-rate-limit": "^5.1.1",
         "@types/jsonwebtoken": "^8.5.0",
+        "@types/mime": "^2.0.3",
+        "@types/mkdirp": "^1.0.1",
         "@types/node": "^14.14.20",
         "@types/pg": "^7.14.7",
         "eslint": "^4.16.0",
@@ -56,5 +57,9 @@
         "ts-node": "^9.1.1",
         "ts-node-dev": "^1.1.1",
         "typescript": "^4.1.3"
+    },
+    "resolutions": {
+        "fs-capacitor": "^6.2.0",
+        "graphql-upload": "^11.0.0"
     }
 }
